@@ -10,6 +10,16 @@ document.querySelectorAll(".splitText").forEach((desc) => {
   desc.setAttribute("aria-label", splitText);
 });
 
+gsap.set(".header__inner", {
+  opacity: 0,
+});
+
+gsap.to(".header__inner", {
+  opacity: 1,
+  duration: 3,
+  delay: 3,
+});
+
 gsap.to(".visual_line1", {
   duration: 3.5,
   width: "100%",
@@ -86,19 +96,64 @@ gsap.to("#visual_dimension", {
 
 /* Javascript */
 
-gsap.registerPlugin(ScrollTrigger);
-let SECTIONS = gsap.utils.toArray(".slide");
+// Today header handling
+// keep at bottom
+ScrollTrigger.create({
+  trigger: ".sticky-today",
+  start: "top bottom-=150",
+  endTrigger: ".today-content",
+  end: "bottom bottom-=75",
+  pin: true,
+  pinSpacing: false,
+});
 
-gsap.to(SECTIONS, {
-  xPercent: -100 * (SECTIONS.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#javascript",
-    end: () => "+=" + document.querySelector("#javascript").offsetWidth,
-    pin: true,
-    scrub: 1,
-    snap: 1 / (SECTIONS.length - 1),
-  },
+// keep at top
+ScrollTrigger.create({
+  trigger: ".sticky-today",
+  start: "top top+=75",
+  endTrigger: "html",
+  end: "bottom bottom",
+  pin: true,
+  pinSpacing: false,
+});
+
+// Tomorrow header handling
+// keep at bottom
+ScrollTrigger.create({
+  trigger: ".sticky-tomorrow",
+  start: "top bottom-=75",
+  endTrigger: ".tomorrow-content",
+  end: "bottom bottom-=75",
+  pin: true,
+  pinSpacing: false,
+});
+
+// keep at top
+ScrollTrigger.create({
+  trigger: ".sticky-tomorrow",
+  start: "top top+=150",
+  endTrigger: "html",
+  end: "bottom bottom",
+  pin: true,
+  pinSpacing: false,
 });
 
 /* Website */
+
+gsap.set(".website_box li", {
+  y: 170,
+  opacity: 0,
+});
+
+gsap.to(".website_box li", {
+  y: 0,
+  opacity: 1,
+  duration: 1.3,
+  stagger: 0.08,
+  scrollTrigger: {
+    trigger: "#website",
+    start: "top 50%",
+    end: "bottom 10%",
+    toggleActions: "restart none reverse none",
+  },
+});
