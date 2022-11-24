@@ -74,7 +74,7 @@ const createBubble = () => {
     vector.original = vector.clone();
   }
   const bubbleMaterial = new THREE.MeshStandardMaterial({
-    emissive: 0xbd4be3,
+    emissive: 0xf1ede8,
     emissiveIntensity: 0.5,
     roughness: 0.61,
     metalness: 0.21,
