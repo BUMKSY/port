@@ -5,42 +5,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Park Portfolio</title>
+  <title>Park’s Portfolio</title>
+
+  <meta property="og:image" content="../meta/thumb.jpg">
+  <link rel="shortcut icon" href="meta/favicon.ico">
+
   <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
   <link href="https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/horizontal.scss">
 </head>
 
 <body>
+
+  <div id="smooth-wrapper">
 
   <!--Header-->
   <header>
     <div class="header__inner">
       <div class="header__logo">
         <a href="#">
-          PORTFOLIO
-          <br />
-          <em>FRONTEND</em>
+          PARK’S
         </a>
       </div>
       <nav class="header__menu">
         <ul>
           <li>
-            <a href="#">ABOUT</a>
+            <a href="#about">ABOUT</a>
           </li>
           <li>
-            <a href="#">WEBSITE</a>
+            <a href="#website">WEBSITE</a>
           </li>
           <li>
-            <a href="#">JAVASCRIPT</a>
+            <a href="#javascript">JAVASCRIPT</a>
           </li>
           <li>
-            <a href="#">ANIMATION</a>
-          </li>
-          <li>
-            <a href="#">CONTACT</a>
+            <a href="#contact">CONTACT</a>
           </li>
         </ul>
       </nav>
@@ -51,7 +51,7 @@
   <section id="visual">
     <div class="visual_inner">
       <div class="visual_title">
-        <h2 class="splitText">PARK'S&nbspPORTFOLIO</h2>
+        <h2 class="splitText">PARK’S&nbspPORTFOLIO</h2>
       </div>
       <div class="visual_line_box">
         <ul>
@@ -72,21 +72,20 @@
   </section>
 
   <section id="visual_dimension">
-    <div class="visual_dimension_inner">
-      <div class="dimension_box_title">
-        <h3>PORTFOLIO OF<br>
-          CREATIVE<br>
-          & FRONTEND
-        </h3>
-        <canvas class="scene" id="bubble" width="100%" height="100%" style="width: 100%; height: 700px;"></canvas>
-      </div>
+      <div class="visual_dimension_inner">
+        <div class="text">
+            <div>PORTFOLIO OF</div>
+            <div>CREATIVE</div>
+            <div>& FRONTEND</div>
+        </div>
+        <canvas id="webgl"></canvas>
     </div>
   </section>
-
 
   <!--About-->
   <section id="about">
     <div class="about_inner">
+
       <div class="about_title">
         <span class="left_tit">
           <em>'HELLO'</em>
@@ -99,60 +98,43 @@
           <h3>1.</h3>
           <br>
           <p>
-            안녕하세요
+            안녕하세요!
             <br>
             <br>
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며 세부적인 곳까지
-            파고드는 개발자가 되겠습니다.
+            어떤 일이라도 노력하고 즐기면 그 결과는 빛을 발한다고 생각합니다.
+            <br>
+            어려움도 있었지만 배우는 즐거움이 컸으며, 노력으로 극복하고자 하였습니다.
+            <br>
+            앞으로도 배움을 놓지 않는 개발자가 되겠습니다.
 
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며 세부적인 곳까지
-            파고드는 개발자가 되겠습니다.
-
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며
-            감사합니다.
           </p>
         </div>
         <div>
           <h3>2.</h3>
           <br>
           <p>
-            안녕하세요
+            반갑습니다!
             <br>
             <br>
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며 세부적인 곳까지
-            파고드는 개발자가 되겠습니다.
-
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며 세부적인 곳까지
-            파고드는 개발자가 되겠습니다.
-
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며
-            감사합니다.
+            저는 새로운 것을 배우는 걸 좋아합니다. 웹디자인과 코딩 역시 그러한 
+            <br>
+            호기심에 배우기 시작하였고, 점차 확장하여 프론트엔드를 꿈꾸기에 이르렀습니다.
+            <br>
+            앞으로도 항상 도전하는 마음을 잃지 않고 변화하는 지식을 습득하려는 시도를 계속하겠습니다.
           </p>
         </div>
         <div>
           <h3>3.</h3>
           <br>
           <p>
-            안녕하세요
+            앞으로도!
             <br>
             <br>
-            신입의 열정과 도전정신을 깊숙히 새기며
+            신입의 열정과 도전정신을 깊숙이 새기며
+            <br>
             배움에 있어 겸손함을 유지하며 세부적인 곳까지
+            <br>
             파고드는 개발자가 되겠습니다.
-
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며 세부적인 곳까지
-            파고드는 개발자가 되겠습니다.
-
-            신입의 열정과 도전정신을 깊숙히 새기며
-            배움에 있어 겸손함을 유지하며
-            감사합니다.
           </p>
         </div>
 
@@ -172,48 +154,173 @@
       </div>
       <ul class="website_box">
         <li>
-          <div class="website_imgbox"></div>
-          <h3>Website Standard</h3>
+          <a href="http://xn--699ax4rjkar02a85ermgqxtita.com/" target="_blank">
+            <div class="website_imgbox">
+                <img src="img/paragon_logo.png" alt="paragon_logo">
+            </div>
+          </a>
+          <h3>PARAGON</h3>
           <ul>
-            <li>Ⓐ&nbsp;&nbsp;&nbsp;&nbsp; STANDARD</li>
-            <li>Ⓑ&nbsp;&nbsp;&nbsp;&nbsp; HTML / CSS</li>
-            <li>Ⓒ&nbsp;&nbsp;&nbsp;&nbsp; VISUAL STUDIO CODE</li>
-            <li>Ⓓ&nbsp;&nbsp;&nbsp;&nbsp; PERSONAL WORK</li>
+            <li>Ⓐ&nbsp;&nbsp;&nbsp; STANDARD</li>
+            <li>Ⓑ&nbsp;&nbsp;&nbsp; OPERATIONAL SITE</li>
+            <li>Ⓒ&nbsp;&nbsp;&nbsp; VS CODE</li>
+            <li>Ⓓ&nbsp;&nbsp;&nbsp; COMPANY WORK</li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://golden-square.co.kr/" target="_blank">
+            <div class="website_imgbox">
+                <img src="img/golden_logo.png" alt="golden_logo">
+            </div>
+          </a>
+          <h3>GOLDEN SQUARE</h3>
+          <ul>
+            <li>Ⓐ&nbsp;&nbsp;&nbsp; STANDARD</li>
+            <li>Ⓑ&nbsp;&nbsp;&nbsp; OPERATIONAL SITE</li>
+            <li>Ⓒ&nbsp;&nbsp;&nbsp; VS CODE</li>
+            <li>Ⓓ&nbsp;&nbsp;&nbsp; COMPANY WORK</li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://platium.co.kr/" target="_blank">
+            <div class="website_imgbox">
+                <img src="img/jeju_logo.png" alt="jeju_logo">
+            </div>
+          </a>
+          <h3>PLATIUM 61</h3>
+          <ul>
+            <li>Ⓐ&nbsp;&nbsp;&nbsp; STANDARD</li>
+            <li>Ⓑ&nbsp;&nbsp;&nbsp; OPERATIONAL SITE</li>
+            <li>Ⓒ&nbsp;&nbsp;&nbsp; VS CODE</li>
+            <li>Ⓓ&nbsp;&nbsp;&nbsp; COMPANY WORK</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="website_box">
+        <li>
+          <div class="website_imgbox"></div>
+          <h3>STANDARD WEB</h3>
+          <ul>
+            <li>Ⓐ&nbsp;&nbsp;&nbsp; STANDARD</li>
+            <li>Ⓑ&nbsp;&nbsp;&nbsp; DEMO SITE</li>
+            <li>Ⓒ&nbsp;&nbsp;&nbsp; VS CODE</li>
+            <li>Ⓓ&nbsp;&nbsp;&nbsp; PERSONAL WORK</li>
           </ul>
         </li>
         <li>
           <div class="website_imgbox"></div>
-          <h3>Website Standard</h3>
+          <h3>RESPONSIVE WEB</h3>
           <ul>
-            <li>Ⓐ&nbsp;&nbsp;&nbsp;&nbsp; STANDARD</li>
-            <li>Ⓑ&nbsp;&nbsp;&nbsp;&nbsp; HTML / CSS</li>
-            <li>Ⓒ&nbsp;&nbsp;&nbsp;&nbsp; VISUAL STUDIO CODE</li>
-            <li>Ⓓ&nbsp;&nbsp;&nbsp;&nbsp; PERSONAL WORK</li>
+            <li>Ⓐ&nbsp;&nbsp;&nbsp; RESPONSIVE</li>
+            <li>Ⓑ&nbsp;&nbsp;&nbsp; DEMO SITE</li>
+            <li>Ⓒ&nbsp;&nbsp;&nbsp; VS CODE</li>
+            <li>Ⓓ&nbsp;&nbsp;&nbsp; PERSONAL WORK</li>
           </ul>
         </li>
         <li>
           <div class="website_imgbox"></div>
-          <h3>Website Standard</h3>
+          <h3>MEGABOX</h3>
           <ul>
-            <li>Ⓐ&nbsp;&nbsp;&nbsp;&nbsp; STANDARD</li>
-            <li>Ⓑ&nbsp;&nbsp;&nbsp;&nbsp; HTML / CSS</li>
-            <li>Ⓒ&nbsp;&nbsp;&nbsp;&nbsp; VISUAL STUDIO CODE</li>
-            <li>Ⓓ&nbsp;&nbsp;&nbsp;&nbsp; PERSONAL WORK</li>
+            <li>Ⓐ&nbsp;&nbsp;&nbsp; RESPONSIVE</li>
+            <li>Ⓑ&nbsp;&nbsp;&nbsp; DEMO SITE</li>
+            <li>Ⓒ&nbsp;&nbsp;&nbsp; VS CODE</li>
+            <li>Ⓓ&nbsp;&nbsp;&nbsp; PERSONAL WORK</li>
           </ul>
         </li>
       </ul>
     
       <div class="website_pro">
         
-        <div class="panel red">
-          ONE
+        <div class="panel first">
+          <div class="panel webtext">
+            <h3>WEBSITE</h3>
+            <div class="webtext_title">
+              <p>REACT WEBSITE</p>
+            </div>
+            <div class="webtext_desc">
+              <p>
+                React 라이브러리를 이용하여 작업한 사이트입니다.<br>
+                컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br>
+                또한 SCSS를 사용하여 스타일을 지정하였고,<br>
+                Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.
+              </p>
+            </div>
+            <div class="web_view">
+              <a href="#">WEBSITE VIEW</a>
+            </div>
+          </div>
+          <div class="panel webbox w1">
+            <div class="card">
+              <div class="imgBx">
+                  <img src="img/youtube_ex.png" alt="youtube_example">
+              </div>
+              <div class="details">
+                  <h2>REACT<br><span>Youtube Website</span></h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="panel orange">
-          TWO
+        
+        <div class="panel second">
+          <div class="panel webtext">
+            <h3>WEBSITE</h3>
+            <div class="webtext_title">
+              <p>VUE WEBSITE</p>
+            </div>
+            <div class="webtext_desc">
+              <p>
+                Vue 라이브러리를 이용하여 작업한 포트폴리오 사이트입니다.<br>
+                컴퍼넌트를 생성하여 싱글페이지를 출력시켰고 레퍼런스의 탭메뉴를 구현하였습니다.<br>
+                또한 SCSS를 사용하여 스타일을 지정하였고,<br>
+                Youtube 페이지에서 API를 이용한 동영상 목록과 검색이 가능합니다.      
+              </p>
+            </div>
+            <div class="web_view">
+              <a href="#">WEBSITE VIEW</a>
+            </div>
+          </div>
+          <div class="panel webbox w2">
+            <div class="card">
+              <div class="imgBx">
+                  <img src="" alt="">
+              </div>
+              <div class="details">
+                  <h2>VUE<br><span>Youtube Website</span></h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="panel purple">
-          THREE
-        </div>
+
+        <div class="panel third">
+          <div class="panel webtext">
+            <h3>WEBSITE</h3>
+            <div class="webtext_title">
+              <p>PHP WEBSITE</p>
+            </div>
+            <div class="webtext_desc">
+              <p>
+                웹 표준을 준수한 기본 형태의 PHP 사이트입니다.<br>
+                모든 사용자가 사용에 불편함이 없도록 웹 접근성을 고려해 코딩했습니다.<br>
+                MySQL 연동 으로 DataBase에 회원관리와 게시물을 저장 등 기본적이고<br>
+               동적인 웹사이트를 코딩하였습니다.
+              </p>
+            </div>
+            <div class="web_view">
+              <a href="#">WEBSITE VIEW</a>
+            </div>
+          </div>
+          <div class="panel webbox w3">
+            <div class="card">
+              <div class="imgBx">
+                  <img src="" alt="">
+              </div>
+              <div class="details">
+                  <h2>PHP<br><span>Php Website</span></h2>
+              </div>
+            </div>
+          </div>
+        </div>  
       
       </div>
     
@@ -242,12 +349,39 @@
 
       <div class="animation_box">
         <div class="left_animation">
-
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
+          <div class='ani_dot'>
+            <div></div>
+          </div>
         </div>
         <div class="right_animation">
-
+              <p id="cir_text">
+                CREATIVE・DEVELOPER・DESIGN・WEB・SOCIAL・POSTIVE・ATTITUDE・ACTIVE・
+              </p>
+              <div class="ani_arrow">
+                <img src="img/ani_arrow.png" alt="down_arrow">
+              </div>
         </div>
-      </div>
     </div>
   </section>
 
@@ -255,64 +389,214 @@
   <section id="javascript">
     <div class="javascript_inner">
 
-      <div class="trigger-container">
-        <ul id="project_container">   
-  
-          <li class="project">
-            <div class="project__inner red">
-              <div class="project-container">
-                <div class="project-container__inner">
-                  <h3>1</h3>
-                </div>
-              </div>
+      <div class="java-wrap">
+        <div class="j1">
+          <h3>Ⓐ</h3>
+          <div class="middle_box">
+            <video class="game_video" src="video/game_video.mp4" autoplay loop muted type="mp4"></video>
+          </div>
+          <div class="java_desc_box">
+            <div class="java_desc_title">
+              TETRIS<br>
+              GAME
             </div>
-          </li>
-          
-          <li class="project">
-            <div class="project__inner green">
-              <div class="project-container">
-                <div class="project-container__inner">
-                  <h3>2</h3>
-                </div>
-              </div>
-  
+            <div class="java_desc">
+              자바스크립트를 활용하여 만든<br>
+              추억의 테트리스 게임입니다.
             </div>
-          </li>
-  
-          <li class="project">
-            <div class="project__inner orange">
-              <div class="project-container">
-                <div class="project-container__inner">
-                  <h3>3</h3>
-                </div>
-              </div>
+            <div class="java_view_bt">
+              <a aria-label='Thanks' class='h-button centered' data-text='PLAY ME' href='#'>
+                <span>E</span>
+                <span>N</span>
+                <span>J</span>
+                <span>O</span>
+                <span>Y</span>
+              </a>
             </div>
-          </li>
-          
-          <li class="project">
-            <div class="project__inner purple">
-              <div class="project-container">
-                <div class="project-container__inner">
-                  <h3>4</h3>
-                </div>
-              </div>
-            </div>
-          </li>
-        
-        </ul>
-      </div>
+          </div>
+          <div class="java_bottom">
+            <span>JAVASCRIPT PORTFOLIO</span>
+            <span>TETRIS GAME</span>
+            <span>ONE</span>
+          </div>
+        </div>
 
+        <div class="j2">
+          <h3>Ⓑ</h3>
+          <div class="middle_box">
+            <video class="card_video" src="video/poker_game.mp4" autoplay loop muted type="mp4"></video>
+          </div>
+          <div class="java_desc_box">
+            <div class="java_desc_title">
+              CARD<br>
+              GAME
+            </div>
+            <div class="java_desc">
+              자바스크립트를 활용하여 만든<br>
+              카드 맞추기 게임 입니다.
+            </div>
+            <div class="java_view_bt">
+              <a aria-label='Thanks' class='h-button centered' data-text='PLAY ME' href='#'>
+                <span>E</span>
+                <span>N</span>
+                <span>J</span>
+                <span>O</span>
+                <span>Y</span>
+              </a>
+            </div>
+          </div>
+          <div class="java_bottom">
+            <span>JAVASCRIPT PORTFOLIO</span>
+            <span>CARD GAME</span>
+            <span>TWO</span>
+          </div>
+        </div>
+
+        <div class="j3">
+          <h3>Ⓒ</h3>
+          <div class="middle_box">
+            <video class="typing_video" src="video/typing_game.mp4" autoplay loop muted type="mp4"></video>
+          </div>
+          <div class="java_desc_box">
+            <div class="java_desc_title">
+              TYPING<br>
+              GAME
+            </div>
+            <div class="java_desc">
+              자바스크립트를 활용하여 만든<br>
+              타이핑 게임 입니다.
+            </div>
+            <div class="java_view_bt">
+              <a aria-label='Thanks' class='h-button centered' data-text='PLAY ME' href='#'>
+                <span>E</span>
+                <span>N</span>
+                <span>J</span>
+                <span>O</span>
+                <span>Y</span>
+              </a>
+            </div>
+          </div>
+          <div class="java_bottom">
+            <span>JAVASCRIPT PORTFOLIO</span>
+            <span>TYPING GAME</span>
+            <span>THREE</span>
+          </div>
+        </div>
+
+        <div class="j4">
+          <h3>Ⓓ</h3>
+          <div class="middle_box">
+            <video class="space_video" src="video/space_video.mp4" autoplay loop muted type="mp4"></video>
+          </div>
+          <div class="java_desc_box">
+            <div class="java_desc_title">
+              SHOOTING<br>
+              GAME
+            </div>
+            <div class="java_desc">
+              자바스크립트를 활용하여 만든<br>
+              비행기 슈팅 게임 입니다.
+            </div>
+            <div class="java_view_bt">
+              <a aria-label='Thanks' class='h-button centered' data-text='PLAY ME' href='#'>
+                <span>E</span>
+                <span>N</span>
+                <span>J</span>
+                <span>O</span>
+                <span>Y</span>
+              </a>
+            </div>
+          </div>
+          <div class="java_bottom">
+            <span>JAVASCRIPT PORTFOLIO</span>
+            <span>SHOOTING GAME</span>
+            <span>FOUR</span>
+          </div>
+        </div>
+
+        <div class="j5">
+          <h3>Ⓔ</h3>
+          <div class="middle_box">
+            <video class="music_video" src="video/music_video.mp4" autoplay loop muted type="mp4"></video>
+          </div>
+          <div class="java_desc_box">
+            <div class="java_desc_title">
+              MUSIC<br>
+              PLAYER
+            </div>
+            <div class="java_desc">
+              자바스크립트를 활용하여 만든<br>
+              뮤직 플레이어 입니다.
+            </div>
+            <div class="java_view_bt">
+              <a aria-label='Thanks' class='h-button centered' data-text='PLAY ME' href='#'>
+                <span>E</span>
+                <span>N</span>
+                <span>J</span>
+                <span>O</span>
+                <span>Y</span>
+              </a>
+            </div>
+          </div>
+          <div class="java_bottom">
+            <span>JAVASCRIPT PORTFOLIO</span>
+            <span>MUSIC PLAYER</span>
+            <span>FIVE</span>
+          </div>
+        </div>
+
+    </div>
     </div>
   </section>
 
   <!--Slogan-->
   <section id="slogan">
     <div class="slogan_inner">
-      <h2>
-        THOUGH BEGINNING<br>
-        SEEMS HUMBLE FUTURE<br>
-        WILL BE PROSPEROUS
-      </h2>
+
+      <div class="slogan_txt_wrap">        
+        <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+        
+          <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+        
+          <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+        
+          <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+        
+          <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+        
+          <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+
+        <div class="slogan_txt_text">
+          THOUGH BEGINNING<br>
+          SEEMS HUMBLE FUTURE<br>
+          WILL BE PROSPEROUS
+        </div>
+      </div>
+    
     </div>
 
     <div class="slogan_line_box">
@@ -334,7 +618,29 @@
         WE SHOULD TALK TO?</h2>
       
       <div class="contact_box">
-
+        <div class="contact_photo">
+          <img class="ct_photo" src="img/portrait.png" alt="my_photo">
+          <img class="ct_text" src="img/contact_bg_text.png" alt="ct_text">
+        </div>
+        <div class="contact_desc">
+          <p>
+            PLEASE<br>
+            CONTACT ME<br>
+            HERE
+          </p>
+          <div class="contact_mail_button" id="button-1">
+            <div id="dub-arrow">
+              <img src="img/contact_mail.png" alt="" />
+            </div>
+            <a href="#">Mail Me</a>
+          </div>
+          <div class="contact_call_button" id="button-2">
+            <div id="dub-arrow">
+              <img src="img/contact_call.png" alt="" />
+            </div>
+            <a href="#">Call Me</a>
+          </div>
+        </div>
       </div>  
     </div>
   </section>
@@ -349,13 +655,36 @@
     </div>
     </div>
   </section>
+
+  <!--Footer-->
+  <section class="footer">
+    <div class="footer_inner">
+      <div class="foot_left">
+        <div>TANKYOU FOR VISIT !</div>
+        <span>사이트를 방문해주셔서 감사합니다.<br>좋은하루 보내세요.</span>
+      </div>
+      <div class="foot_right">
+        <dl>
+          <dt><a href="">HOME</a></dt>
+          <dt><a href="">ABOUT</a></dt>
+          <dt><a href="">CONTACT</a></dt>
+          <dt>PARK’S</dt>
+          <dt>COPYRIGHT© PARK’S PORTFOLIO 2022 ALL RIGHTS RESERVED.</dt>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</div>
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/97/three.min.js"></script>
 <script src="https://cdn.rawgit.com/josephg/noisejs/master/perlin.js"></script>
+
 <script src="js/main.js"></script>
 <script src="js/visual3d.js"></script>
 

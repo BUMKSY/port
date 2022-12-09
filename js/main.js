@@ -2,7 +2,6 @@
 
 /* Header */
 
-/*
 gsap.set(".header__inner", {
   background: "##F1EDE8",
 });
@@ -16,13 +15,7 @@ gsap.to(".header__inner", {
     end: "bottom",
     invalidateOnRefresh: true,
     toggleActions: "restart reset restart reset",
-    markers: true,
   },
-});
-*/
-
-gsap.set(".header__inner a", {
-  color: "#2B2B2B",
 });
 
 gsap.to(".header__inner a", {
@@ -169,12 +162,50 @@ gsap.to(".website_box li", {
     trigger: "#website",
     start: "top top",
     end: "bottom 10%",
-    toggleActions: "restart none none none",
   },
 });
 
-/* Javascript */
+/*
+gsap.to(".panel .webbox", {
+  transform: "rotate(-4deg)",
+  marginBottom: "-5%",
+  duration: 1.7,
+  stagger: 2,
+  scrollTrigger: {
+    trigger: ".website_pro",
+    start: ".website_imgbox 60%",
+    end: "bottom",
+  },
+});
+*/
 
+/* Animation */
+
+gsap.set(".animation_inner h2", {
+  y: 90,
+  opacity: 0,
+});
+
+gsap.to(".animation_inner h2", {
+  y: 0,
+  opacity: 1,
+  duration: 1.5,
+  ease: "expo",
+  scrollTrigger: {
+    trigger: ".third",
+    start: "top",
+  },
+});
+
+const text = document.getElementById("cir_text");
+const rotate = new CircleType(text).radius(50);
+
+window.addEventListener("scroll", function () {
+  text.style.transform = "rotate(" + window.scrollY * 0.15 + "deg)";
+});
+
+/* Javascript */
+/*
 gsap.set(".project", { zIndex: (i, target, targets) => targets.length - i });
 
 // Project stack FX
@@ -202,16 +233,157 @@ projects.forEach((project, i) => {
     });
   }
 });
+*/
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".java-wrap", // 객체기준범위
+      start: "top top", // 시작점
+      end: () => `+=${document.querySelector(".java-wrap").offsetHeight}`, // 끝점
+      scrub: 2.3, // 모션바운스
+    },
+  })
+  .to(".java-wrap > div.j2", {
+    duration: 3,
+    x: 0,
+  })
+  .to(".java-wrap > div.j3", {
+    duration: 3,
+    x: 0,
+  })
+  .to(".java-wrap > div.j4", {
+    duration: 3,
+    x: 0,
+  })
+  .to(".java-wrap > div.j5", {
+    duration: 3,
+    x: 0,
+  });
 
 /* Slogan */
 
 gsap.to(".slogan_line_box ul li", {
-  duration: 1.6,
+  duration: 2,
   marginTop: "0.6vw",
   ease: "back.inOut",
   scrollTrigger: {
-    trigger: ".slogan_inner h2",
+    trigger: ".slogan_inner",
     end: "bottom top",
     toggleActions: "restart none none none",
   },
+});
+
+/* Smooth */
+
+/*
+window.addEventListener("load", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const pageContainer = document.querySelector("#smooth-wrapper");
+  pageContainer.setAttribute("data-scroll-container", "");
+
+  const scroller = new LocomotiveScroll({
+    el: pageContainer,
+    smooth: true,
+    getDirection: true,
+  });
+
+  scroller.on("scroll", function (t) {
+    document.documentElement.setAttribute("data-direction", t.direction);
+  });
+
+  scroller.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy(pageContainer, {
+    scrollTop(value) {
+      return arguments.length
+        ? scroller.scrollTo(value, 0, 0)
+        : scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        left: 0,
+        top: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+    pinType: pageContainer.style.transform ? "transform" : "fixed",
+  });
+
+  // Pinning and horizontal scrolling
+
+  let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+
+  horizontalSections.forEach((horizontalSection) => {
+    let pinWrap = horizontalSection.querySelector(".pin-wrap");
+    let pinWrapWidth = pinWrap.offsetWidth;
+    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+    gsap.to(pinWrap, {
+      scrollTrigger: {
+        scroller: "[data-scroll-container]",
+        scrub: true,
+        trigger: horizontalSection,
+        pin: true,
+        start: "top top",
+        end: () => `+=${pinWrapWidth}`,
+        invalidateOnRefresh: true,
+      },
+      x: -horizontalScrollLength,
+      ease: "none",
+    });
+  });
+*/
+/* COLOR CHANGER */
+/*
+  const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+  scrollColorElems.forEach((colorSection, i) => {
+    const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+    const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+
+    ScrollTrigger.create({
+      trigger: colorSection,
+      scroller: "[data-scroll-container]",
+      start: "top 50%",
+      onEnter: () =>
+        gsap.to("body", {
+          backgroundColor: colorSection.dataset.bgcolor,
+          color: colorSection.dataset.textcolor,
+          overwrite: "auto",
+        }),
+      onLeaveBack: () =>
+        gsap.to("body", {
+          backgroundColor: prevBg,
+          color: prevText,
+          overwrite: "auto",
+        }),
+    });
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+  ScrollTrigger.refresh();
+});
+*/
+
+/* Slogan */
+
+const webtext = document.querySelectorAll(".slogan_txt_text");
+const halfX = window.innerWidth / 2;
+const halfY = window.innerHeight / 2;
+
+webtext.forEach((el, i) => {
+  TweenMax.to(el, 1, {
+    z: 1 * (i + 8),
+  });
+});
+
+document.addEventListener("mousemove", (e) => {
+  webtext.forEach((el, i) => {
+    TweenMax.to(el, 0.5, {
+      x: (e.clientX - halfX) * (i + 1) * 0.01,
+      y: (e.clientY - halfY) * (i + 1) * 0.01,
+    });
+  });
 });

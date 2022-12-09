@@ -1,4 +1,5 @@
-const canvas = document.querySelector("#bubble");
+const canvas = document.querySelector("#webgl");
+
 let width = canvas.offsetWidth,
   height = canvas.offsetHeight;
 
@@ -19,7 +20,7 @@ const setup = () => {
   scene.fog = new THREE.Fog(0x000000, 10, 950);
 
   const aspectRatio = width / height;
-  const fieldOfView = 100;
+  const fieldOfView = 75;
   const nearPlane = 0.1;
   const farPlane = 10000;
   camera = new THREE.PerspectiveCamera(
@@ -30,7 +31,7 @@ const setup = () => {
   );
   camera.position.x = 0;
   camera.position.y = 0;
-  camera.position.z = 170;
+  camera.position.z = 210;
 };
 setup();
 
@@ -74,7 +75,7 @@ const createBubble = () => {
     vector.original = vector.clone();
   }
   const bubbleMaterial = new THREE.MeshStandardMaterial({
-    emissive: 0xf1ede8,
+    emissive: 0xe5d5c3,
     emissiveIntensity: 0.5,
     roughness: 0.61,
     metalness: 0.21,
@@ -116,7 +117,8 @@ const distance = (a, b) => {
 
 let mouse = new THREE.Vector2(0, 0);
 const onMouseMove = (e) => {
-  gsap.to(mouse, 0.8, {
+  gsap.to(mouse, {
+    duration: 0.8,
     x: e.clientX || e.pageX || e.touches[0].pageX || 0,
     y: e.clientY || e.pageY || e.touches[0].pageY || 0,
     ease: Power2.easeOut,
@@ -131,13 +133,15 @@ let spring = {
 };
 const clicking = {
   down: () => {
-    gsap.to(spring, 0.7, {
+    gsap.to(spring, {
+      duration: 0.7,
       scale: 0.7,
       ease: Power3.easeOut,
     });
   },
   up: () => {
-    gsap.to(spring, 0.9, {
+    gsap.to(spring, {
+      duration: 0.9,
       scale: 1,
       ease: Elastic.easeOut,
     });
