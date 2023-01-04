@@ -244,10 +244,6 @@ gsap
       scrub: 2.3, // 모션바운스
     },
   })
-  .to(".java-wrap > div.j2", {
-    duration: 3,
-    x: 0,
-  })
   .to(".java-wrap > div.j3", {
     duration: 3,
     x: 0,
